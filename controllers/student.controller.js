@@ -8,6 +8,7 @@ router.get('/', async (req, res) => {
     try {
         const schools = await service.getAllSchools();
         res.json(schools);
+        res.send("school api running");
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
